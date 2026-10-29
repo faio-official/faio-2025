@@ -8,7 +8,7 @@
 </h1>
 
 <p align="center">
-  🎓 2nd Fizmat AI Olympiad — tasks, solutions & starter kits.
+  🎓 2nd edition — tasks, solutions & starter kits.
 </p>
 
 <p align="center">
