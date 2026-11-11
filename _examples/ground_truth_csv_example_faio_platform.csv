@@ -1,0 +1,6 @@
+id,target,usage
+01,1,Public
+02,0,Public
+...,...,...
+80,1,Private
+81,0,Private

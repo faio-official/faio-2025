@@ -1,0 +1,131 @@
+<!DOCTYPE html
+  SYSTEM "html">
+<div class="problem-statement"><div class="header"><h1 class="title">Who Speaks What?</h1><table></table></div><h2></h2><div class="legend"><h1 id="story">Story</h1> 
+<p>Two interns, <strong>Adilkhan</strong> and <strong>Darkhan</strong>, have just started working as data scientists in the <strong>NLP team</strong> at a large telecom company. Their team lead, suggested their very first task: to improve the company’s customer service chatbot.</p> 
+<p>Since the telecom has millions of customers speaking in <strong>Kazakh</strong>, <strong>Russian</strong>, and <strong>English</strong>, a crucial requirement is to detect the customer’s language correctly from the very first query. Without accurate language identification, the chatbot might respond in the wrong language, frustrating the user.</p> 
+<p>To solve this, Adilkhan and Darkhan compiled a dataset of real conversational messages collected from the company’s support system. They prepared two files: <code>train.csv</code> and <code>test.csv</code>, each containing short conversational texts labeled with one of three languages: <code>“ru”</code>, <code>“kaz”</code>, or <code>“eng”</code>.</p> 
+<p>Now it is your mission to build a model that can accurately predict the language of any incoming text. Your help is vital, if Adilkhan and Darkhan succeed, they will <strong>pass their internship</strong> and become full-time NLP engineers!</p> 
+<h1 id="formal-problem-statement">Formal Problem Statement</h1> 
+<p>You are given two CSV files:</p> 
+<ul> 
+ <li><p><code>train.csv</code>: Contains training data in the form of text samples with their corresponding labels (<code>ru</code>, <code>kaz</code>, <code>eng</code>).</p></li> 
+ <li><p><code>test.csv</code>: Contains only text samples, without labels. Your model must predict the correct label for each test example.</p></li> 
+</ul> 
+<p>The dataset can be accessed here:</p> 
+<ul> 
+ <li><p><a href="https://drive.google.com/file/d/1XUD55k0pOmVhTXIGqTzqCdNUVowwsiZT/view?usp=sharing">Train dataset</a></p></li> 
+ <li><p><a href="https://drive.google.com/file/d/1kQpO0guFWuVnuBjQB8vzQtS8T6IgzT2-/view?usp=sharing">Test dataset</a></p></li> 
+</ul> 
+<h1 id="input">Input</h1> 
+<ul> 
+ <li><p><code>train.csv</code> with columns: <code>text</code>, <code>label</code>.</p></li> 
+ <li><p><code>test.csv</code> with column: <code>text</code>.</p></li> 
+ <li><p>Labels are one of: <code>ru</code>, <code>kaz</code>, <code>eng</code>.</p></li> 
+</ul> 
+<h1 id="output">Output</h1> 
+<p>Participants must submit only a CSV file named <strong>solution.csv</strong>, with the following format:</p> 
+<pre><code>id,label
+0,eng
+1,kaz
+2,ru
+...</code></pre> 
+<p><strong>Important:</strong> Submit only the <code>solution.csv</code> file. Source code is not required. The order of <code>id</code> values in <code>solution.csv</code> must strictly follow the order in <code>test.csv</code>, starting from <code>0</code> up to the highest ID.</p> 
+<h1 id="evaluation">Evaluation</h1> 
+<ul> 
+ <li><p>Your predictions will be evaluated using the <strong>Macro F1-score</strong>.</p></li> 
+ <li><p>Final competition score is normalized as follows:</p> 
+  <ul> 
+   <li><p>If F1-score <span class="math inline"><span class="katex"><span class="katex-mathml">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow>
+           <mo>
+            &lt;
+           </mo>
+           <mn>
+            0.6
+           </mn>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           &lt; 0.6
+          </annotation>
+         </semantics>
+        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0.6</span></span></span></span></span>: score = 0.</p></li> 
+   <li><p>If F1-score <span class="math inline"><span class="katex"><span class="katex-mathml">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+         <semantics>
+          <mrow>
+           <mo>
+            =
+           </mo>
+           <mn>
+            1.0
+           </mn>
+          </mrow>
+          <annotation encoding="application/x-tex">
+           = 1.0
+          </annotation>
+         </semantics>
+        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1.0</span></span></span></span></span>: score = 100.</p></li> 
+   <li><p>For values in between: <span class="math display"><span class="katex-display"><span class="katex"><span class="katex-mathml">
+         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+          <semantics>
+           <mrow>
+            <mtext>
+             score
+            </mtext>
+            <mo>
+             =
+            </mo>
+            <mfrac>
+             <mrow>
+              <mi>
+               F
+              </mi>
+              <mn>
+               1
+              </mn>
+              <mo>
+               −
+              </mo>
+              <mn>
+               0.6
+              </mn>
+             </mrow>
+             <mrow>
+              <mn>
+               1.0
+              </mn>
+              <mo>
+               −
+              </mo>
+              <mn>
+               0.6
+              </mn>
+             </mrow>
+            </mfrac>
+            <mo>
+             ×
+            </mo>
+            <mn>
+             100
+            </mn>
+           </mrow>
+           <annotation encoding="application/x-tex">
+            \text{score} = \frac{F1 - 0.6}{1.0 - 0.6} \times 100
+           </annotation>
+          </semantics>
+         </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord text"><span class="mord">score</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1297em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1.0</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0.6</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0.6</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">100</span></span></span></span></span></span></p></li> 
+  </ul></li> 
+</ul> 
+<h1 id="example">Example</h1> 
+<p><strong>Input (<code>test.csv</code>):</strong></p> 
+<pre><code>id,text
+0,Hello, how are you?
+1,Сәлеметсіз бе?
+2,Привет, как дела?</code></pre> 
+<p><strong>Your Output (<code>solution.csv</code>):</strong></p> 
+<pre><code>id,label
+0,eng
+1,kaz
+2,ru</code></pre></div></div>

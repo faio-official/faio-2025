@@ -1,0 +1,69 @@
+<!DOCTYPE html
+  SYSTEM "html">
+<div class="problem-statement"><div class="header"><h1 class="title">AI йога нұсқаушысы бола аласыз ба?</h1><table></table></div><h2></h2><div class="legend"><h1 id="кіріспе">Кіріспе</h1> 
+<p><strong>Әділхан</strong> мен <strong>Дархан</strong> — жас зерттеушілер. Олар технологияның дене жаттығуларын қалай жақсарта алатынын зерттеуге шешім қабылдап - қатысушыларға <strong>IMU сенсорлары</strong> орнатады. Сол аркылы бірнеше йога қалыптарының есептейді. Әрбір әрекет мұқият <code>дұрыс</code> немесе <code>бұрыс</code> деп таңбаланды.</p> 
+<p>Мақсат: әрекеттің дұрыс орындалғанын автоматты түрде анықтайтын модель құру.</p> 
+<h1 id="есептің-шарты">Есептің шарты</h1> 
+<p>Сізге үш CSV файл берілген:</p> 
+<ul> 
+ <li><p><code>X_train.csv</code>: IMU деректерінен алынған сегменттері бар оқыту жиыны.</p></li> 
+ <li><p><code>y_train.csv</code>: оқыту жиынының таңбалары (<code>0</code> = бұрыс, <code>1</code> = дұрыс).</p></li> 
+ <li><p><code>X_test.csv</code>: таңбалары берілмеген тест жиыны (тек IMU деректері). Модель әр мысал үшін таңбаны болжауы керек.</p></li> 
+</ul> 
+<p>Деректер жиыны мына сілтемелер арқылы қолжетімді:</p> 
+<ul> 
+ <li><p><a href="https://drive.google.com/file/d/1wMuHEYsXKt3_IhgAUiUcpPvuctLM9jGL/view?usp=drive_link"><strong>X_train.csv</strong></a></p></li> 
+ <li><p><a href="https://drive.google.com/file/d/1F3mUFseTH3mi6bkY13flJTAK4tGTMIzm/view?usp=drive_link"><strong>y_train.csv</strong></a></p></li> 
+ <li><p><a href="https://drive.google.com/file/d/1OdlLTsLPyLa7JUmhQcRtP9ixlYE82H7k/view?usp=drive_link"><strong>X_test.csv</strong></a></p></li> 
+</ul> 
+<h1 id="кіріс-деректері">Кіріс деректері</h1> 
+<h2 id="сипаттамалар-x">Сипаттамалар (X)</h2> 
+<p>Әр қайталау <strong>200 Гц</strong> жиілікпен өлшенген IMU уақыттық қатарларымен сипатталады. Берілген сенсорлық сигналдар:</p> 
+<ul> 
+ <li><p><code>ax</code>, <code>ay</code>, <code>az</code> — X, Y, Z осьтері бойымен сызықтық үдеулер (g);</p></li> 
+ <li><p><code>wx</code>, <code>wy</code>, <code>wz</code> — X, Y, Z осьтері айналасындағы бұрыштық жылдамдықтар (<span class="math inline"><span class="katex"><span class="katex-mathml">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+       <semantics>
+        <mrow>
+         <msup>
+          <mrow></mrow>
+          <mo>
+           ∘
+          </mo>
+         </msup>
+        </mrow>
+        <annotation encoding="application/x-tex">
+         ^\circ
+        </annotation>
+       </semantics>
+      </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6741em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6741em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∘</span></span></span></span></span></span></span></span></span></span></span></span>/с).</p></li> 
+</ul> 
+<h2 id="таңбалар-y">Таңбалар (y)</h2> 
+<ul> 
+ <li><p><code>0</code> — қайталау қате орындалған;</p></li> 
+ <li><p><code>1</code> — қайталау дұрыс орындалған.</p></li> 
+</ul> 
+<p>Әрбір <code>id</code> бір йога қайталануына сәйкес келеді.</p> 
+<h1 id="шығыс-деректері">Шығыс деректері</h1> 
+<p>Қатысушылар тек <strong>solution.csv</strong> атты CSV файлын тапсырады. Форматы:</p> 
+<pre><code>id,label
+0,1
+1,0
+2,1
+...</code></pre> 
+<p><strong>Маңызды:</strong> тек <code>solution.csv</code> файлын жіберіңіз; бағдарлама коды талап етілмейді. <code>solution.csv</code> ішіндегі <code>id</code> мәндерінің реті <code>X_test.csv</code> файлының ретімен қатаң сәйкес болуы тиіс, <code>0</code>-ден бастап ең үлкен <code>id</code>-ке дейін.</p> 
+<h1 id="бағалау">Бағалау</h1> 
+<ul> 
+ <li><p>Болжамдар <strong>Accuracy</strong> метрикасы бойынша бағаланады.</p></li> 
+</ul> 
+<h1 id="мысал">Мысал</h1> 
+<p><strong>Кіріс (<code>X_test.csv</code>):</strong></p> 
+<pre><code>id,ax,ay,az,wx,wy,wz
+0,0.12,0.04,0.98,-1.2,0.3,0.1
+1,0.01,0.15,1.02,0.8,-0.5,0.0
+2,-0.10,0.20,0.95,0.7,0.1,-0.2</code></pre> 
+<p><strong>Шығыс (<code>solution.csv</code>):</strong></p> 
+<pre><code>id,label
+0,1
+1,0
+2,1</code></pre></div></div>

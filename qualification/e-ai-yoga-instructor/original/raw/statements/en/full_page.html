@@ -1,0 +1,54 @@
+<!DOCTYPE html
+  SYSTEM "html">
+<div class="problem-statement"><div class="header"><h1 class="title">Can You Become AI Yoga Instructor?</h1><table></table></div><h2></h2><div class="legend"><h1 id="introduction">Introduction</h1> 
+<p><strong>Adilkhan</strong> and <strong>Darkhan</strong> are young researchers who decided to explore how technology can improve physical training. They equipped participants with <strong>IMU sensors</strong> and recorded multiple yoga pose repetitions. Each attempt was carefully labeled as either <code>correct</code> or <code>incorrect</code>.</p> 
+<p>Their goal is simple: to train a model that can automatically recognize whether a repetition is done properly. Now, it is your mission to continue their work and build an accurate classifier to evaluate unseen yoga repetitions.</p> 
+<h1 id="formal-problem-statement">Formal Problem Statement</h1> 
+<p>You are given three CSV files:</p> 
+<ul> 
+ <li><p><code>X_train.csv</code>: Training set with IMU data segments.</p></li> 
+ <li><p><code>y_train.csv</code>: Labels for the training set (<code>0</code> = incorrect, <code>1</code> = correct).</p></li> 
+ <li><p><code>X_test.csv</code>: Test set with IMU data segments, without labels. Your model must predict the label for each test example.</p></li> 
+</ul> 
+<p>The dataset can be accessed here:</p> 
+<ul> 
+ <li><p><a href="https://drive.google.com/file/d/1wMuHEYsXKt3_IhgAUiUcpPvuctLM9jGL/view?usp=drive_link"><strong>X_train.csv</strong></a></p></li> 
+ <li><p><a href="https://drive.google.com/file/d/1F3mUFseTH3mi6bkY13flJTAK4tGTMIzm/view?usp=drive_link"><strong>y_train.csv</strong></a></p></li> 
+ <li><p><a href="https://drive.google.com/file/d/1OdlLTsLPyLa7JUmhQcRtP9ixlYE82H7k/view?usp=drive_link"><strong>X_test.csv</strong></a></p></li> 
+</ul> 
+<h1 id="input">Input</h1> 
+<h2 id="features-x">Features (X)</h2> 
+<p>Each repetition is represented by time series of IMU readings sampled at <strong>200 Hz</strong>. The following sensor signals are provided:</p> 
+<ul> 
+ <li><p><code>ax</code>, <code>ay</code>, <code>az</code> — Linear acceleration (g) along the sensor’s X, Y, Z axes.</p></li> 
+ <li><p><code>wx</code>, <code>wy</code>, <code>wz</code> — Angular velocity (deg/s) around the sensor’s X, Y, Z axes.</p></li> 
+</ul> 
+<h2 id="labels-y">Labels (y)</h2> 
+<ul> 
+ <li><p><code>0</code> — repetition performed incorrectly.</p></li> 
+ <li><p><code>1</code> — repetition performed correctly.</p></li> 
+</ul> 
+<p>Each <code>id</code> corresponds to one yoga repetition.</p> 
+<h1 id="output">Output</h1> 
+<p>Participants must submit only a CSV file named <strong>solution.csv</strong>, with the following format:</p> 
+<pre><code>id,label
+0,1
+1,0
+2,1
+...</code></pre> 
+<p><strong>Important:</strong> Submit only the <code>solution.csv</code> file. Source code is not required. The order of <code>id</code> values in <code>solution.csv</code> must strictly follow the order in <code>test.csv</code>, starting from <code>0</code> up to the highest ID.</p> 
+<h1 id="evaluation">Evaluation</h1> 
+<ul> 
+ <li><p>Your predictions will be evaluated using the <strong>Accuracy score</strong>.</p></li> 
+</ul> 
+<h1 id="example">Example</h1> 
+<p><strong>Input (<code>X_test.csv</code>):</strong></p> 
+<pre><code>id,ax,ay,az,wx,wy,wz
+0,0.12,0.04,0.98,-1.2,0.3,0.1
+1,0.01,0.15,1.02,0.8,-0.5,0.0
+2,-0.10,0.20,0.95,0.7,0.1,-0.2</code></pre> 
+<p><strong>Your Output (<code>solution.csv</code>):</strong></p> 
+<pre><code>id,label
+0,1
+1,0
+2,1</code></pre></div></div>

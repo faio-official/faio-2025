@@ -1,48 +1,25 @@
-<!-- DOCTOC SKIP -->
+# Day 1 — FAIO 2025
 
-<h1 align="center">
-  🏁 FAIO 2025 — 1st Round
-</h1>
+<p align="center"><b>English</b> · <a href="./README.kz.md">Қазақша</a> · <a href="./README.ru.md">Русский</a></p>
 
-<p align="center">
-  <strong>All translations to Kazakh (Қазақша) and Russian (Русский) for the problems are in</strong>
-  <a href="./1st-round-FAIO-2025-KZ-RU.pdf">HERE</a>
-</p>
+<div align="center">
+  <a href="https://faio.kz">
+    <img src="https://faio.kz/assets/img/logo-faio.png" alt="FAIO logo" border="0" width="100">
+  </a>
+</div>
 
----
+Welcome to Day 1 of the olympiad. Today's three problems hand you tabular image features, a question-answering challenge, and audio — and ask you to pull structure out of each. Solve them in any order; each task is scored independently. Good luck.
 
-🎓 **Welcome to the 1st Round of FAIO 2025!**
+- **1 — Qaz Letters.** Classify each Kazakh letter from a set of handcrafted numerical features extracted from its image (42 classes).
+- **2 — Who Is the Best Pitcher?** Build a retrieval-augmented agent that answers questions about Major League Baseball from structured JSON data, matching each answer exactly.
+- **3 — Missing Fundamental Puzzle.** Identify the original musical note from an audio clip whose fundamental frequency has been removed.
 
-Dear participant, congratulations on reaching the first stage of our Olympiad!  
-In this round, you'll need to solve **3 problems** covering different areas of artificial intelligence.  
-Each task is worth **1 point**. The maximum score for this round is **3 points**.
+| # | Problem | Statement |
+| --- | --- | --- |
+| A | [Qaz Letters](./a-qaz-letters/) | [English](./a-qaz-letters/en.md) · [Қазақша](./a-qaz-letters/kz.md) · [Русский](./a-qaz-letters/ru.md) |
+| B | [Who is the Best Pitcher?](./b-best-pitcher/) | [English](./b-best-pitcher/en.md) · [Қазақша](./b-best-pitcher/kz.md) · [Русский](./b-best-pitcher/ru.md) |
+| C | [Missing Fundamental Puzzle](./c-missing-fundamental/) | [English](./c-missing-fundamental/en.md) · [Қазақша](./c-missing-fundamental/kz.md) · [Русский](./c-missing-fundamental/ru.md) |
 
----
+📄 Printed 1st round statement booklet, Kazakh and Russian: [PDF](./1st-round-FAIO-2025-KZ-RU.pdf).
 
-### 🧩 Problem 1 — Qaz-letters
-- 📄 **Task Description:** You need to build a machine learning model for automatic Kazakh letter classification. The dataset contains only numerical features extracted from images: statistical, geometric, projection, and transform-based features — not raw images.
-- 🔧 **What to do:** Train a classification model that predicts the correct Kazakh letter based on the given features.
-- 📊 **Metric:** Performance is evaluated using Accuracy, which measures the proportion of correctly classified letters. The metric ranges from 0 to 1 (1 means all letters are classified correctly, 0 means none are correct).
-- 🔗 **Kaggle:** [Click here](https://www.kaggle.com/t/23291ce18385cab3fab6ff5f45f1b0ba), [late submission](https://www.kaggle.com/competitions/kazakh-letters/leaderboard) 
-- 📝 **Task:** [Click here](./qaz_letters.md)
-
-### 🧩 Problem 2 — Who is the best pitcher?
-- 📄 **Task Description:** Build a RAG-powered question-answering agent for Major League Baseball (MLB). The goal is to answer baseball-related questions using large, structured JSON datasets about teams, players, games, seasons, and records.
-- 🔧 **What to do:** Develop a system that ingests and parses JSON data, organizes it for knowledge retrieval, and uses a retrieval-augmented generation (RAG) architecture to generate accurate answers to MLB questions.
-- 📊 **Metric:** Accuracy is the evaluation metric — the number of correct answers divided by total questions. The metric ranges from 0 to 1 (1 means all answers are correct, 0 means none are correct).
-- 🔗 **Kaggle:** [Click here](https://www.kaggle.com/t/96bfb8a3431c91d7479308df476fc0ee)
-- 📝 **Task:** [Click here](./Who_is_the_best_pitcher.md)
-- 🥇 **Baseline:** [Click here](./host-author-s-baseline.ipynb) (13 MB — too large for GitHub's preview; open it via [nbviewer](https://nbviewer.org/github/faio-official/faio-2025/blob/main/day1/host-author-s-baseline.ipynb) or [Colab](https://colab.research.google.com/github/faio-official/faio-2025/blob/main/day1/host-author-s-baseline.ipynb))
-
-### 🧩 Problem 3 — Misssing fundamental puzzle
-- 📄 **Task Description:** Build a pitch classification model for musical audio illusions. The goal is to identify the original musical note (e.g., C4, G#5) from audio samples in which the fundamental frequency and several harmonics have been removed.
-- 🔧 **What to do:** Develop a system that analyzes mono WAV files (22050 Hz). Each file is a musical excerpt with missing frequencies—your model must reconstruct the pitch label from the spectral pattern of the remaining harmonics.
-- 📊 **Metric:** Accuracy is the evaluation metric — the number of correct predictions divided by the total number of examples. The metric ranges from 0 to 1 (1 means all answers are correct, 0 means none are correct).
-- 🔗 **Kaggle:** [Click here](https://www.kaggle.com/t/fbaef0197897255be8710f080fd1b4ae)
-- 📝 **Task:** [Click here](.//Missing_Fundamental_Puzzle.md)
-
----
-
-<p align="center">
-  🎉 <strong>Good luck and enjoy the challenge!</strong>
-</p>
+Each problem folder holds the statement, its figures, the scorer and the source it was migrated from.

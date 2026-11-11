@@ -1,0 +1,311 @@
+<!DOCTYPE html
+  SYSTEM "html">
+<div class="problem-statement"><div class="header"><h1 class="title">Қарапайым объектілер</h1><table></table></div><h2></h2><div class="legend"><h1 id="оқиға">Оқиға</h1> 
+<p>Геометрия деген шуақты қалада болашақ сәулетші Әділханға маңызды тапсырма берілді: жаңа «ПолиПарк» рекреациялық кешенінің жобаларын талдау. Бұл кешен негізгі геометриялық пішіндерден тұратын болашақты технологиямен жасалған. Материал шығынын есептеу, құрылыс бригадаларын тағайындау және 3D-басып шығару роботтарының кестесін жасау үшін, қаланың әкімі Дархан әрбір жобада неше түрлі геометриялық фигуралар (үшбұрыштар, тіктөртбұрыштар, шеңберлер т.б.) бар екенін дәл білуі керек.</p> 
+<p>Өкінішке орай, Әділханның көмекшісі барлық жобаларды векторлық диаграммалар немесе CAD файлдары ретінде емес, RGB кескіндері түрінде сақтап қойған. Сондықтан автоматты есептеу бағдарламасы жұмыс істемей жатыр! Қала әкімі Әділханнан осы есептеулерді жұмыс күні біткенше дайындап беруді сұрап отыр. Сондықтан Әділхан <strong>сіздерге</strong> — өте зерек мектеп оқушыларынан көмек сұрап отыр.</p> 
+<p>Әрбір жоба кескіні <strong>100-ден 500-ге дейін</strong> геометриялық фигуралардан тұрады. Фигуралар өлшемі, түсі және бағдары бойынша әртүрлі болуы мүмкін. Бірақ олар әрқашан нақты, үзіліссіз шекаралармен салынған және бір-бірімен қиылыспайды немесе екімәнді түрде араласпайды (яғни әр фигураны анық бөліп тануға болады). Сіздің міндетіңіз — берілген RGB сурет бойынша жобадағы геометриялық фигуралардың <strong>нақты санын</strong> шығаратын бағдарлама жазу.</p> 
+<h1 id="есептің-шарты">Есептің шарты</h1> 
+<p>Сізге стандартты RGB форматындағы (мысалы, PNG немесе JPG) суреттер берілген. Олардың өлшемі <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mn>
+        2048
+       </mn>
+       <mo>
+        ×
+       </mo>
+       <mn>
+        2048
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       2048 \times 2048
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">2048</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2048</span></span></span></span></span> пиксельден тұрады. Әрбір суретте N геометриялық фигура бар (<span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mn>
+        100
+       </mn>
+       <mo>
+        ≤
+       </mo>
+       <mi>
+        N
+       </mi>
+       <mo>
+        ≤
+       </mo>
+       <mn>
+        500
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       100 \leq N \leq 500
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">100</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">500</span></span></span></span></span>). Фигуралар үшбұрыш, төртбұрыш немесе шеңберден тұруы мүмкін. Фигуралар үзіліссіз түсті шекаралармен (контурмен) салынған және ішкі аймағы мөлдір немесе боялған болуы мүмкін. Фон фигуралардың шекараларынан анық ажыратылады.</p> 
+<h1 id="кіріс-мәліметтер">Кіріс мәліметтер</h1> 
+<ul> 
+ <li><p>Әрбір тест үшін бір RGB кескін файлы беріледі.</p></li> 
+ <li><p>Кескін OpenCV, PIL сияқты кең тараған кескін өңдеу кітапханаларымен оқылатын стандартты форматта (мысалы, PNG немесе JPG) беріледі.</p></li> 
+ <li><p>Фигуралар шекаралары қабаттаспайды. Шекара пиксельдерін қарастырғанда әр фигура — бір байланысқан компонент болып табылады.</p></li> 
+</ul> 
+<h1 id="шығыс-мәліметтер">Шығыс мәліметтер</h1> 
+<ul> 
+ <li><p>CSV файл (submit.csv). Әрбір қатарда бір ғана бүтін сан: кескінде анықталған геометриялық фигуралардың жалпы саны.</p></li> 
+</ul> 
+<p><strong>Өте маңызды!</strong> submit.csv файлын ғана жіберіңіз. Бастапқы код қажет емес. submit.csv ішіндегі идентификатор мәндерінің реті 0-ден бастап ең жоғары идентификаторға дейін test.csv ішіндегі ретті қатаң сақтауы тиіс.</p> 
+<h1 id="бағалау-әдісі">Бағалау әдісі:</h1> 
+<p>Сіздің шешіміңіз 8000 кескін бойынша тексеріледі.</p> 
+<p>Бағалау метрикасы — <strong>Арнайы дәлдік (Customized Accuracy)</strong>, ол төмендегі формулалар арқылы анықталады.</p> 
+<p><span class="math display"><span class="katex-display"><span class="katex"><span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <semantics>
+       <mrow>
+        <mtext>
+         Қате&nbsp;деңгейі
+        </mtext>
+        <mo>
+         =
+        </mo>
+        <mfrac>
+         <mrow>
+          <mo fence="true">
+           ∣
+          </mo>
+          <mover accent="true">
+           <mi>
+            y
+           </mi>
+           <mo>
+            ^
+           </mo>
+          </mover>
+          <mo>
+           −
+          </mo>
+          <mi>
+           y
+          </mi>
+          <mo fence="true">
+           ∣
+          </mo>
+         </mrow>
+         <mi>
+          y
+         </mi>
+        </mfrac>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        \text{Қате деңгейі} = \frac{ \left| \hat{y} - y \right| }{ y }
+       </annotation>
+      </semantics>
+     </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord cyrillic_fallback">Қате</span><span class="mord">&nbsp;</span><span class="mord cyrillic_fallback">деңгейі</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3074em;vertical-align:-0.8804em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="minner"><span class="mopen delimcenter" style="top:0em;">∣</span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose delimcenter" style="top:0em;">∣</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></span></p> 
+<p><span class="math display"><span class="katex-display"><span class="katex"><span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <semantics>
+       <mrow>
+        <mtext>
+         Дәлдік
+        </mtext>
+        <mo>
+         =
+        </mo>
+        <mn>
+         1
+        </mn>
+        <mo>
+         −
+        </mo>
+        <mi>
+         min
+        </mi>
+        <mo>
+         ⁡
+        </mo>
+        <mrow>
+         <mo fence="true">
+          (
+         </mo>
+         <mn>
+          1
+         </mn>
+         <mo separator="true">
+          ,
+         </mo>
+         <mtext>
+          Қате&nbsp;деңгейі
+         </mtext>
+         <mo fence="true">
+          )
+         </mo>
+        </mrow>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        \text{Дәлдік} = 1 - \min\left(1, \text{Қате деңгейі}\right)
+       </annotation>
+      </semantics>
+     </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord cyrillic_fallback">Дәлдік</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">min</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord cyrillic_fallback">Қате</span><span class="mord">&nbsp;</span><span class="mord cyrillic_fallback">деңгейі</span></span><span class="mclose delimcenter" style="top:0em;">)</span></span></span></span></span></span></span></p> 
+<p><span class="math display"><span class="katex-display"><span class="katex"><span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <semantics>
+       <mrow>
+        <mtext>
+         Қорытынды&nbsp;баға
+        </mtext>
+        <mo>
+         =
+        </mo>
+        <mrow>
+         <mo fence="true">
+          {
+         </mo>
+         <mtable rowspacing="0.36em" columnalign="left left" columnspacing="1em">
+          <mtr>
+           <mtd>
+            <mstyle scriptlevel="0" displaystyle="false">
+             <mrow>
+              <mn>
+               0
+              </mn>
+              <mo separator="true">
+               ,
+              </mo>
+             </mrow>
+            </mstyle>
+           </mtd>
+           <mtd>
+            <mstyle scriptlevel="0" displaystyle="false">
+             <mrow>
+              <mtext>
+               егер&nbsp;Дәлдік
+              </mtext>
+              <mo>
+               &gt;
+              </mo>
+              <mn>
+               0.55
+              </mn>
+             </mrow>
+            </mstyle>
+           </mtd>
+          </mtr>
+          <mtr>
+           <mtd>
+            <mstyle scriptlevel="0" displaystyle="false">
+             <mrow>
+              <mfrac>
+               <mrow>
+                <mtext>
+                 Дәлдік
+                </mtext>
+                <mo>
+                 −
+                </mo>
+                <mn>
+                 0.55
+                </mn>
+               </mrow>
+               <mrow>
+                <mn>
+                 1
+                </mn>
+                <mo>
+                 −
+                </mo>
+                <mn>
+                 0.55
+                </mn>
+               </mrow>
+              </mfrac>
+              <mo separator="true">
+               ,
+              </mo>
+             </mrow>
+            </mstyle>
+           </mtd>
+           <mtd>
+            <mstyle scriptlevel="0" displaystyle="false">
+             <mtext>
+              басқаша&nbsp;жағдайда
+             </mtext>
+            </mstyle>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mrow>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        \text{Қорытынды баға} = \begin{cases} 0, &amp; \text{егер } \text{Дәлдік} &gt; 0.55 \\ \frac{\text{Дәлдік} - 0.55}{1 - 0.55}, &amp; \text{басқаша жағдайда} \end{cases}
+       </annotation>
+      </semantics>
+     </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord cyrillic_fallback">Қорытынды</span><span class="mord">&nbsp;</span><span class="mord cyrillic_fallback">баға</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3em;vertical-align:-1.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord">0</span><span class="mpunct">,</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9244em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mbin mtight">−</span><span class="mord mtight">0.55</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4461em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord cyrillic_fallback mtight">Дәлдік</span></span><span class="mbin mtight">−</span><span class="mord mtight">0.55</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4033em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord cyrillic_fallback">егер</span><span class="mord">&nbsp;</span></span><span class="mord text"><span class="mord cyrillic_fallback">Дәлдік</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">0.55</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord cyrillic_fallback">басқаша</span><span class="mord">&nbsp;</span><span class="mord cyrillic_fallback">жағдайда</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></span></p> 
+<p><span class="math display"><span class="katex-display"><span class="katex"><span class="katex-mathml">
+     <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <semantics>
+       <mrow>
+        <mtext mathvariant="bold">
+         Белгілеулер:
+        </mtext>
+        <mspace width="1em" />
+        <mover accent="true">
+         <mi>
+          y
+         </mi>
+         <mo>
+          ^
+         </mo>
+        </mover>
+        <mo>
+         =
+        </mo>
+        <mtext>
+         модельдің&nbsp;болжамы
+        </mtext>
+        <mo separator="true">
+         ,
+        </mo>
+        <mspace width="1em" />
+        <mi>
+         y
+        </mi>
+        <mo>
+         =
+        </mo>
+        <mtext>
+         шын&nbsp;мәні&nbsp;(белгі)
+        </mtext>
+       </mrow>
+       <annotation encoding="application/x-tex">
+        \textbf{Белгілеулер:} \quad \hat{y} = \text{модельдің болжамы}, \quad y = \text{шын мәні (белгі)}
+       </annotation>
+      </semantics>
+     </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord textbf cyrillic_fallback">Белгілеулер</span><span class="mord textbf">:</span></span><span class="mspace" style="margin-right:1em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">^</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1944em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord cyrillic_fallback">модельдің</span><span class="mord">&nbsp;</span><span class="mord cyrillic_fallback">болжамы</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord cyrillic_fallback">шын</span><span class="mord">&nbsp;</span><span class="mord cyrillic_fallback">мәні</span><span class="mord">&nbsp;(</span><span class="mord cyrillic_fallback">белгі</span><span class="mord">)</span></span></span></span></span></span></span></p> 
+<h1 id="мысалы">Мысалы:</h1> 
+<p><strong>Кіріс кескіні:</strong><br> </p> 
+<div class=""> 
+ <p><img src="https://assets.contest.yandex.net/testsys/statement-file?hash=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..x2X7Tbp6haRMHP8m.V2xg5MKy_Jha8LhT_APEgmSvP7uXSzPCiLD-uEgZLcfHfBzxhjOwHXSOwiDrTRVhyQQbVRyTvIgrj2GDjLHZc7n1UguL4tH54ttSl0J0VKFDIYpLLw.VNbLJBWaRYNrCOtSP6R8tg" alt="image"></p> 
+</div> 
+<p>Мысалы: 1 қызыл үшбұрыш, 1 көк шеңбер, 1 жасыл тіктөртбұрыш бар.</p> 
+<p><strong>Шешім:</strong><br> <code>3</code></p> 
+<p>Files:</p> 
+<ul> 
+ <li><p><a href="https://disk.yandex.com/d/mJ2Wqw1VmAS97Q">train.csv</a></p></li> 
+ <li><p><a href="https://disk.yandex.com/d/_Jyxim1o5Ylzig">train images</a></p></li> 
+ <li><p><a href="https://disk.yandex.com/d/yzaAMlkcbyqStw">test images</a></p></li> 
+ <li><p><a href="https://disk.yandex.com/d/ABq-mBGRiOYOUw">submit.csv</a></p></li> 
+</ul> 
+<h1 id="оқушыларға-кеңестер">Оқушыларға кеңестер</h1> 
+<p>Сіз кез келген бағдарламалау тілін және кітапханаларды (OpenCV, scikit-image, PIL т.б.) пайдалана аласыз.</p> 
+<p>Шекараларды анықтау (edge detection), контурларды табу (contour finding) және фигураларды олардың қасиеттері бойынша (мысалы, бұрыштар саны, қабырғалар қатынасы, дөңгелектік дәрежесі) танып, санайтын әдістерді қарастырыңыз.</p> 
+<p>Есте сақтаңыз: сізден фигуралардың түрлерін анықтау емес, тек олардың <strong>санын</strong> анықтау талап етіледі. Алайда фигуралардың түрлерін анықтау арқылы санауға да болады).</p> 
+<p>Шешіміңізді әртүрлі мысалдарда сынаңыз: кішкентай және үлкен фигуралар, әртүрлі түстер, бұрылған пішіндер.</p> 
+<h1 id="неге-бұл-маңызды">Неге бұл маңызды?</h1> 
+<p>Компьютерлік көруде кескіндердегі нәрселерді санау мен табу өте маңызды. Мысалы, медицинада жасушаларды санау, көше камераларында машиналарды анықтау. Бұл есеп нағыз инженерлік мәселені үлгілейді және сіздің кескін өңдеу мен машиналық оқыту дағдыларыңызды жетілдіруге көмектеседі.</p> 
+<p>Іске сәт!</p> 
+<p>Ізгі ниетпен,</p> 
+<p>— <em>Геометрия қаласының әкімшілігі</em></p></div></div>

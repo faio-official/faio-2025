@@ -8,7 +8,7 @@
 </h1>
 
 <p align="center">
-  🎓 2nd edition — tasks, solutions & starter kits.
+  🎓 2nd edition — statements in three languages, figures, scorers and the original Kaggle and Yandex sources.
 </p>
 
 <p align="center">
@@ -20,36 +20,58 @@
 ---
 
 ### 🧠 Qualification Round
-- 📘 **Readme:** [Open](./qualification/README.md)
+- 📘 **Round readme:** [English](./qualification/README.md) · [Қазақша](./qualification/README.kz.md) · [Русский](./qualification/README.ru.md)
 
-**Tasks:**
-[1 — Statistics 101](./qualification/task1_stats_101.md) ·
-[2 — Probability Theory 101](./qualification/task2_Probability_theory_101.md) ·
-[3 — Medicine](./qualification/task3_Medicine.md) ·
-[4 — Who Speaks What?](./qualification/task4_Who_Speaks_What.md) ·
-[5 — AI Yoga Instructor](./qualification/task5_Can_You_Become_AI_Yoga_Instructor.md) ·
-[6 — Simple Objects](./qualification/task6_Simple_Objects.md)
+**Problems:**
+[A — Statistics 101](./qualification/a-statistics-101/) ·
+[B — Probability Theory 101](./qualification/b-probability-101/) ·
+[C — Medicine](./qualification/c-medicine/) ·
+[D — Who Speaks What](./qualification/d-who-speaks-what/) ·
+[E — Can You Become an AI Yoga Instructor?](./qualification/e-ai-yoga-instructor/) ·
+[F — Simple Objects](./qualification/f-simple-objects/)
 
 ---
 
 ### 🏁 1st Round
-- 📘 **Readme:** [Open](./day1/README.md)
-- 📄 **Translations (KZ/RU):** [PDF](./day1/1st-round-FAIO-2025-KZ-RU.pdf)
+- 📘 **Round readme:** [English](./day1/README.md) · [Қазақша](./day1/README.kz.md) · [Русский](./day1/README.ru.md)
+- 📄 **Printed booklet (KZ/RU):** [PDF](./day1/1st-round-FAIO-2025-KZ-RU.pdf)
 
 **Problems:**
-[1 — Qaz-letters](./day1/qaz_letters.md) ·
-[2 — Who is the best pitcher?](./day1/Who_is_the_best_pitcher.md) ·
-[3 — Missing Fundamental Puzzle](./day1/Missing_Fundamental_Puzzle.md)
+[A — Qaz Letters](./day1/a-qaz-letters/) ·
+[B — Who is the Best Pitcher?](./day1/b-best-pitcher/) ·
+[C — Missing Fundamental Puzzle](./day1/c-missing-fundamental/)
 
 ---
 
-### 🚀 2nd Round
-- 📘 **Readme:** [Open](./day2/README.md)
-- 📄 **Translations (KZ/RU):** [PDF](./day2/2nd-round-FAIO-2025-KZ-RU.pdf)
+### 🏅 2nd Round
+- 📘 **Round readme:** [English](./day2/README.md) · [Қазақша](./day2/README.kz.md) · [Русский](./day2/README.ru.md)
+- 📄 **Printed booklet (KZ/RU):** [PDF](./day2/2nd-round-FAIO-2025-KZ-RU.pdf)
 
 **Problems:**
-[1 — HearMe: Personalized Music Recommender](./day2/HearMe_Personalized_Music_Recommender.md) ·
-[2 — Lost in the Museum](./day2/Lost_in_the_Museum.md)
+[A — HearMe — Personalized Music Recommender](./day2/a-hearme/) ·
+[B — Lost in the Museum](./day2/b-lost-in-museum/)
+
+---
+### 🧪 Evaluator format
+- 📘 [`_examples/`](./_examples/) — the shape every `evaluate.py` and `ground_truth.csv` on the platform follows.
+
+---
+
+## What is in each problem folder
+
+| | |
+| --- | --- |
+| `en.md` · `kz.md` · `ru.md` | The statement as it ran on contest.faio.kz. |
+| `assets/` | The statement's figures. |
+| `checker/` | The real scorer — the same code the platform runs. |
+| `original/` | The untouched source the problem was migrated from — the Kaggle competition or the Yandex Contest export. |
+| `README.md` | Scoring, provenance, and what is and isn't here. |
+
+Not published: answer keys, the participant data archives, and real participant
+submissions. Data is downloadable from the link in each statement. Two FAIO 2026
+scorers are withheld because they embed live grading secrets — each says so in place.
+
+**Upsolve any of it at [contest.faio.kz](https://contest.faio.kz).**
 
 ---
 

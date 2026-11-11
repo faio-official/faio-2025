@@ -1,40 +1,23 @@
-<!-- DOCTOC SKIP -->
+# Day 2 — FAIO 2025
 
-<h1 align="center">
-  🚀 FAIO 2025 — 2nd Round
-</h1>
+<p align="center"><b>English</b> · <a href="./README.kz.md">Қазақша</a> · <a href="./README.ru.md">Русский</a></p>
 
-<p align="center">
-  Problems in English are described below. For a quick access, check the right side (see <strong>Table of Contents</strong>). For a Kazakh or Russian translation please click
-  <a href="./2nd-round-FAIO-2025-KZ-RU.pdf">HERE</a>.
-</p>
+<div align="center">
+  <a href="https://faio.kz">
+    <img src="https://faio.kz/assets/img/logo-faio.png" alt="FAIO logo" border="0" width="100">
+  </a>
+</div>
 
----
+Welcome to Day 2. Today's two problems move to recommendation and image retrieval. Solve them in any order; each task is scored independently. Good luck.
 
-🎓 **Welcome to the 2nd Round of FAIO 2025!**
+- **1 — HearMe: Personalized Music Recommender.** Recommend the 50 most relevant tracks for each listener; your score reflects how much of each recommendation they would actually play.
+- **2 — Lost in the Museum.** Produce an embedding for every image so that each visitor's photo retrieves its matching high-quality museum painting within the top three candidates.
 
-Dear participant, congratulations on making it to Day 2 of our Olympiad!  
-In this round, you'll face **2 new problems** that challenge your skills in computer vision and recommender systems.  
-Each task is worth **1 point**. The maximum score for this round is **2 points**.
+| # | Problem | Statement |
+| --- | --- | --- |
+| A | [HearMe — Personalized Music Recommender](./a-hearme/) | [English](./a-hearme/en.md) · [Қазақша](./a-hearme/kz.md) · [Русский](./a-hearme/ru.md) |
+| B | [Lost in the Museum](./b-lost-in-museum/) | [English](./b-lost-in-museum/en.md) · [Қазақша](./b-lost-in-museum/kz.md) · [Русский](./b-lost-in-museum/ru.md) |
 
----
+📄 Printed 2nd round statement booklet, Kazakh and Russian: [PDF](./2nd-round-FAIO-2025-KZ-RU.pdf).
 
-### 🧩 Problem 1 — Personalized Music Recommender
-- 📄 **Task Description:** Given real-world listening data from the hitter and Izi music apps, your task is to build a system that recommends the **top 50 most relevant tracks** for each user, based on their preferences and listening history.
-- 🔧 **What to do:** Develop a model that predicts which songs each user will enjoy most—and how much they’ll actually listen. You can use classical ML, deep learning, or hybrid approaches—any strategy to produce high-quality recommendations.
-- 📊 **Metric:** For each test user, recommend exactly 50 tracks ranked by predicted relevance. Score: For each recommendation, record the fraction of the track listened (from 0.0 to 1.0); sum and average these values to compute the final normalized score (0.0 to 1.0).
-- 🔗 **Kaggle:** [Click here](https://www.kaggle.com/t/8298025698a57213001f0536bfaa21ee)
-- 📝 **Task:** [Click here](./HearMe_Personalized_Music_Recommender.md)
-
-### 🧩 Problem 2 — Lost in the Museum
-- 📄 **Task Description:** Can your AI recognize a masterpiece—even when the photo is blurry, tilted, or half-cropped? You are given 20,000 images, including 10,000 high-quality gallery shots of paintings, 1,000 real-world “query” photos (blurred, cropped, poorly lit), and 9,000 distractors. Your objective is to generate **feature embeddings** for all images so that, even with drastic appearance changes, each real-world photo can be matched robustly to its correct painting in the gallery using **cross-domain image retrieval**.
-- 🔧 **What to do:** Build a system that encodes each image (pixels only, no metadata) into a fixed-size feature vector. Ensure that each “query” photo is close to its genuine gallery painting in the embedding space, and far from distractors.
-- 📊 **Metric:** The competition uses the **Hit@3** metric: For every query photo, if the correct gallery painting appears in the **top 3 most similar images** (via cosine similarity of embeddings), it’s counted as a hit. Final score: the fraction of query images with a correct match in the top-3 list (ranges from 0.0 to 1.0).
-- 🔗 **Kaggle:** [Click here](https://www.kaggle.com/t/1a1226a3500cc1d0fb182a42f60c4d41)
-- 📝 **Task:** [Click here](./Lost_in_the_Museum.md)
-
----
-
-<p align="center">
-  🎉 <strong>Good luck and enjoy the challenge!</strong>
-</p>
+Each problem folder holds the statement, its figures, the scorer and the source it was migrated from.
