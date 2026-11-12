@@ -16,5 +16,4 @@ FAIO 2025, Day 2 (2nd round).
 | ------------------------- | --- |
 | `en.md`, `kz.md`, `ru.md` | The statement as it ran on contest.faio.kz. |
 | `assets/`                 | Statement figures (1 file). |
-| `checker/`                | The real scorer — `evaluate.py`. |
 | `original/`               | The Yandex Contest source: the statement in three languages, the original metric (`evaluate.py`), and the untouched export under `raw/`. |

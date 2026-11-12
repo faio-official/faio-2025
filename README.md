@@ -52,18 +52,12 @@
 [B — Lost in the Museum](./day2/b-lost-in-museum/)
 
 ---
-### 🧪 Evaluator format
-- 📘 [`_examples/`](./_examples/) — the shape every `evaluate.py` and `ground_truth.csv` on the platform follows.
-
----
-
 ## What is in each problem folder
 
 | | |
 | --- | --- |
 | `en.md` · `kz.md` · `ru.md` | The statement as it ran on contest.faio.kz. |
 | `assets/` | The statement's figures. |
-| `checker/` | The real scorer — the same code the platform runs. |
 | `original/` | The untouched source the problem was migrated from — the Kaggle competition or the Yandex Contest export. |
 | `README.md` | Scoring and where to solve it. |
 
