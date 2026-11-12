@@ -100,6 +100,7 @@ scorers are withheld because they embed live grading secrets — each says so in
   <a href="https://github.com/llmaza"><img src="https://github.com/llmaza.png?size=100" width="80" height="80" alt="llmaza" /></a>
   <a href="https://github.com/aidosnurmash"><img src="https://github.com/aidosnurmash.png?size=100" width="80" height="80" alt="aidosnurmash" /></a>
   <a href="https://github.com/progyan"><img src="https://github.com/progyan.png?size=100" width="80" height="80" alt="progyan" /></a>
+  <a href="https://github.com/Mazgagzam"><img src="https://github.com/Mazgagzam.png?size=100" width="80" height="80" alt="Mazgagzam" /></a>
 </p>
 
 ---
