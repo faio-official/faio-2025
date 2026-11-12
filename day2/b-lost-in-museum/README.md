@@ -6,7 +6,7 @@ FAIO 2025, Day 2 (2nd round).
 
 **Scoring.** Custom: Hit@3 on embeddings.
 
-**Solve it:** [contest.faio.kz](https://contest.faio.kz)
+**Solve it:** [FAIO 2025 · Day 2](https://contest.faio.kz/spaces/01a18d67-2f61-711b-a432-62be007e9544/contests/day-2) on contest.faio.kz
 
 **Originally ran on:** Kaggle — competition `lost-in-the-museum-v2` *(old link)*
 

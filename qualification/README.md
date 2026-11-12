@@ -17,7 +17,7 @@ Welcome to the FAIO 2025 Qualification round. Its six problems range from pen-an
 - **5 — Can You Become an AI Yoga Instructor?** From wearable IMU sensor readings, decide whether each yoga repetition was performed correctly or incorrectly.
 - **6 — Simple Objects.** Count exactly how many geometric figures (triangles, rectangles, circles) appear in each blueprint image.
 
-**Solve it:** [contest.faio.kz](https://contest.faio.kz)
+**Solve it:** [FAIO 2025 · Qualification](https://contest.faio.kz/spaces/01a18d67-2f61-711b-a432-62be007e9544/contests/qualification) on contest.faio.kz
 
 **Originally ran on:** [Yandex Contest](https://contest.yandex.ru/contest/81908/problems/) *(old link)*
 

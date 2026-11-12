@@ -6,7 +6,7 @@ FAIO 2025, Qualification round.
 
 **Scoring.** Accuracy over the predictions CSV.
 
-**Solve it:** [contest.faio.kz](https://contest.faio.kz)
+**Solve it:** [FAIO 2025 · Qualification](https://contest.faio.kz/spaces/01a18d67-2f61-711b-a432-62be007e9544/contests/qualification) on contest.faio.kz
 
 **Originally ran on:** [Yandex Contest — problem 4](https://contest.yandex.ru/contest/81908/problems/4/) *(old link)*
 

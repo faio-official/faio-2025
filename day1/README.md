@@ -14,7 +14,7 @@ Welcome to Day 1 of the olympiad. Today's three problems hand you tabular image 
 - **2 — Who Is the Best Pitcher?** Build a retrieval-augmented agent that answers questions about Major League Baseball from structured JSON data, matching each answer exactly.
 - **3 — Missing Fundamental Puzzle.** Identify the original musical note from an audio clip whose fundamental frequency has been removed.
 
-**Solve it:** [contest.faio.kz](https://contest.faio.kz)
+**Solve it:** [FAIO 2025 · Day 1](https://contest.faio.kz/spaces/01a18d67-2f61-711b-a432-62be007e9544/contests/day-1) on contest.faio.kz
 
 **Originally ran on:** Kaggle *(old link)*
 

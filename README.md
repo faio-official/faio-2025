@@ -67,7 +67,7 @@
 | `original/` | The untouched source the problem was migrated from — the Kaggle competition or the Yandex Contest export. |
 | `README.md` | Scoring and where to solve it. |
 
-**Upsolve any of it at [contest.faio.kz](https://contest.faio.kz).**
+**Solve it all at [FAIO 2025 on contest.faio.kz](https://contest.faio.kz/spaces/01a18d67-2f61-711b-a432-62be007e9544).**
 
 ---
 

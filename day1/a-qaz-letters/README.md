@@ -6,7 +6,7 @@ FAIO 2025, Day 1 (1st round).
 
 **Scoring.** Accuracy. Public/private split on the `usage` column.
 
-**Solve it:** [contest.faio.kz](https://contest.faio.kz)
+**Solve it:** [FAIO 2025 · Day 1](https://contest.faio.kz/spaces/01a18d67-2f61-711b-a432-62be007e9544/contests/day-1) on contest.faio.kz
 
 **Originally ran on:** Kaggle — competition `qaz-letters` *(old link)*
 
