@@ -6,9 +6,9 @@ FAIO 2025, Day 2 (2nd round).
 
 **Scoring.** Custom: mean top-50 listening fraction.
 
-**Originally ran on:** Kaggle (competition `hear-me-personalized-music-recommender`, not public).
+**Solve it:** [contest.faio.kz](https://contest.faio.kz)
 
-**Upsolve it:** [contest.faio.kz](https://contest.faio.kz).
+**Originally ran on:** Kaggle — competition `hear-me-personalized-music-recommender` *(old link)*
 
 ## What is in this folder
 
@@ -18,7 +18,3 @@ FAIO 2025, Day 2 (2nd round).
 | `assets/`                 | Statement figures (1 file). |
 | `checker/`                | The real scorer — `evaluate.py`. |
 | `original/`               | The Yandex Contest source: the statement in three languages, the original metric (`evaluate.py`), and the untouched export under `raw/`. |
-
----
-
-Answer keys, the participant data archives and real participant submissions are deliberately not published. The data is downloadable from the statement's link on contest.faio.kz.

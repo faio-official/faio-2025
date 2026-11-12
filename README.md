@@ -65,11 +65,7 @@
 | `assets/` | The statement's figures. |
 | `checker/` | The real scorer — the same code the platform runs. |
 | `original/` | The untouched source the problem was migrated from — the Kaggle competition or the Yandex Contest export. |
-| `README.md` | Scoring, provenance, and what is and isn't here. |
-
-Not published: answer keys, the participant data archives, and real participant
-submissions. Data is downloadable from the link in each statement. Two FAIO 2026
-scorers are withheld because they embed live grading secrets — each says so in place.
+| `README.md` | Scoring and where to solve it. |
 
 **Upsolve any of it at [contest.faio.kz](https://contest.faio.kz).**
 

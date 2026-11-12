@@ -6,9 +6,9 @@ FAIO 2025, Qualification round.
 
 **Scoring.** Accuracy over the predictions CSV.
 
-**Originally ran on:** Yandex Contest.
+**Solve it:** [contest.faio.kz](https://contest.faio.kz)
 
-**Upsolve it:** [contest.faio.kz](https://contest.faio.kz).
+**Originally ran on:** [Yandex Contest — problem 4](https://contest.yandex.ru/contest/81908/problems/4/) *(old link)*
 
 ## What is in this folder
 
@@ -21,7 +21,3 @@ FAIO 2025, Qualification round.
 ## Author's solution
 
 [`authors-solution.ipynb`](./authors-solution.ipynb) — the notebook the problem author used.
-
----
-
-Answer keys, the participant data archives and real participant submissions are deliberately not published. The data is downloadable from the statement's link on contest.faio.kz.

@@ -6,9 +6,9 @@ FAIO 2025, Qualification round.
 
 **Scoring.** Accuracy over the predictions CSV.
 
-**Originally ran on:** Yandex Contest.
+**Solve it:** [contest.faio.kz](https://contest.faio.kz)
 
-**Upsolve it:** [contest.faio.kz](https://contest.faio.kz).
+**Originally ran on:** [Yandex Contest — problem 6](https://contest.yandex.ru/contest/81908/problems/6/) *(old link)*
 
 ## What is in this folder
 
@@ -18,7 +18,3 @@ FAIO 2025, Qualification round.
 | `assets/`                 | Statement figures (1 file). |
 | `checker/`                | The real scorer — `evaluate.py`. |
 | `original/`               | The Yandex Contest source: the statement in three languages, the original metric (`evaluate.py`), and the untouched export under `raw/`. |
-
----
-
-Answer keys, the participant data archives and real participant submissions are deliberately not published. The data is downloadable from the statement's link on contest.faio.kz.

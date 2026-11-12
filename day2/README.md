@@ -13,6 +13,10 @@ Welcome to Day 2. Today's two problems move to recommendation and image retrieva
 - **1 — HearMe: Personalized Music Recommender.** Recommend the 50 most relevant tracks for each listener; your score reflects how much of each recommendation they would actually play.
 - **2 — Lost in the Museum.** Produce an embedding for every image so that each visitor's photo retrieves its matching high-quality museum painting within the top three candidates.
 
+**Solve it:** [contest.faio.kz](https://contest.faio.kz)
+
+**Originally ran on:** Kaggle *(old link)*
+
 | # | Problem | Statement |
 | --- | --- | --- |
 | A | [HearMe — Personalized Music Recommender](./a-hearme/) | [English](./a-hearme/en.md) · [Қазақша](./a-hearme/kz.md) · [Русский](./a-hearme/ru.md) |

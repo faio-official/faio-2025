@@ -6,9 +6,9 @@ FAIO 2025, Day 1 (1st round).
 
 **Scoring.** Accuracy, exact string match.
 
-**Originally ran on:** Kaggle (competition `who-s-the-best-pitcher-v2`, not public).
+**Solve it:** [contest.faio.kz](https://contest.faio.kz)
 
-**Upsolve it:** [contest.faio.kz](https://contest.faio.kz).
+**Originally ran on:** Kaggle — competition `who-s-the-best-pitcher-v2` *(old link)*
 
 ## What is in this folder
 
@@ -24,7 +24,3 @@ FAIO 2025, Day 1 (1st round).
 [`authors-solution.ipynb`](./authors-solution.ipynb) — the notebook the problem author used.
 
 > At 13 MB GitHub will not preview this notebook inline. Open it in [nbviewer](https://nbviewer.org/github/faio-official/faio-2025/blob/main/day1/b-best-pitcher/authors-solution.ipynb) or [Colab](https://colab.research.google.com/github/faio-official/faio-2025/blob/main/day1/b-best-pitcher/authors-solution.ipynb) instead.
-
----
-
-Answer keys, the participant data archives and real participant submissions are deliberately not published. The data is downloadable from the statement's link on contest.faio.kz.
