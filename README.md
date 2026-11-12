@@ -8,7 +8,7 @@
 </h1>
 
 <p align="center">
-  🎓 2nd edition — statements in three languages, figures, scorers and the original Kaggle and Yandex sources.
+  🎓 2nd edition — statements in three languages, figures and the original Kaggle and Yandex sources.
 </p>
 
 <p align="center">
