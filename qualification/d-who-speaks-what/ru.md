@@ -15,7 +15,7 @@
 - `train.csv`: Содержит обучающие данные в виде примеров текста с соответствующими метками (`ru`, `kaz`, `eng`).
 - `test.csv`: Содержит только примеры текста без меток. Ваша модель должна предсказать правильную метку для каждого тестового примера.
 
-Оба файла находятся в `data.zip` (см. раздел **Данные** ниже).
+Оба файла находятся в `who-speaks-what.zip` (см. раздел **Данные** ниже).
 
 ## Входные данные
 
@@ -67,8 +67,8 @@ id,label
 
 ## Data
 
-[Download data.zip (1.4 MB)](https://contest.faio.kz/problems/01a1c0a6-2f1e-70cd-a81c-925cb892e062/public/data.zip)
+[Download who-speaks-what.zip (1.4 MB)](https://contest.faio.kz/problems/01a1c0a6-2f1e-70cd-a81c-925cb892e062/public/who-speaks-what.zip)
 
 ```bash
-wget https://contest.faio.kz/problems/01a1c0a6-2f1e-70cd-a81c-925cb892e062/public/data.zip
+wget https://contest.faio.kz/problems/01a1c0a6-2f1e-70cd-a81c-925cb892e062/public/who-speaks-what.zip
 ```

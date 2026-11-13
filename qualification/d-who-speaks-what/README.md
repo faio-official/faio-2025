@@ -4,7 +4,7 @@ FAIO 2025, Qualification round.
 
 **Statement:** [English](./en.md) · [Қазақша](./kz.md) · [Русский](./ru.md)
 
-**Scoring.** Accuracy over the predictions CSV.
+**Scoring.** Macro F1-score, rescaled so that 0.6 scores 0 and 1.0 scores 100.
 
 **Solve it:** [FAIO 2025 · Qualification](https://contest.faio.kz/spaces/01a18d67-2f61-711b-a432-62be007e9544/contests/qualification) on contest.faio.kz
 
@@ -15,7 +15,7 @@ FAIO 2025, Qualification round.
 | File                      | What it is |
 | ------------------------- | --- |
 | `en.md`, `kz.md`, `ru.md` | The statement as it ran on contest.faio.kz. |
-| `original/`               | The Yandex Contest source: the statement in three languages, the original metric (`evaluate.py`), and the untouched export under `raw/`. |
+| `original/`               | The statement as it was published on the original platform. |
 
 ## Author's solution
 

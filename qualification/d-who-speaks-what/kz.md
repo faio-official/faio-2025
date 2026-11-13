@@ -15,7 +15,7 @@
 - `train.csv`: оқу деректері — мәтіндер және олардың белгілері (`ru`, `kaz`, `eng`).
 - `test.csv`: тек мәтіндер, белгілер жоқ. Әрбір мысал үшін дұрыс белгіні болжауыңыз керек.
 
-Екі файл да `data.zip` ішінде берілген (төмендегі **Деректер** бөлімін қараңыз).
+Екі файл да `who-speaks-what.zip` ішінде берілген (төмендегі **Деректер** бөлімін қараңыз).
 
 ## Кіріс деректері
 
@@ -67,8 +67,8 @@ id,label
 
 ## Data
 
-[Download data.zip (1.4 MB)](https://contest.faio.kz/problems/01a1c0a6-2f1e-70cd-a81c-925cb892e062/public/data.zip)
+[Download who-speaks-what.zip (1.4 MB)](https://contest.faio.kz/problems/01a1c0a6-2f1e-70cd-a81c-925cb892e062/public/who-speaks-what.zip)
 
 ```bash
-wget https://contest.faio.kz/problems/01a1c0a6-2f1e-70cd-a81c-925cb892e062/public/data.zip
+wget https://contest.faio.kz/problems/01a1c0a6-2f1e-70cd-a81c-925cb892e062/public/who-speaks-what.zip
 ```

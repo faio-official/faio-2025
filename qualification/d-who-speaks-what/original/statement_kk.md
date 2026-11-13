@@ -15,10 +15,9 @@
 - `train.csv`: оқу деректері — мәтіндер және олардың белгілері (`ru`, `kaz`, `eng`).
 - `test.csv`: тек мәтіндер, белгілер жоқ. Әрбір мысал үшін дұрыс белгіні болжауыңыз керек.
 
-Деректер жиынтығы мына сілтемелер арқылы қолжетімді:
+Деректер жиынтығы мына сілтеме арқылы қолжетімді:
 
-- [Train dataset](https://drive.google.com/file/d/1XUD55k0pOmVhTXIGqTzqCdNUVowwsiZT/view?usp=sharing)
-- [Test dataset](https://drive.google.com/file/d/1kQpO0guFWuVnuBjQB8vzQtS8T6IgzT2-/view?usp=sharing)
+- [who-speaks-what.zip жүктеу](https://contest.faio.kz/problems/01a1c0a6-2f1e-70cd-a81c-925cb892e062/public/who-speaks-what.zip)
 
 ## Кіріс деректері
 

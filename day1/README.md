@@ -26,4 +26,4 @@ Welcome to Day 1 of the olympiad. Today's three problems hand you tabular image 
 
 📄 Printed 1st round statement booklet, Kazakh and Russian: [PDF](./1st-round-FAIO-2025-KZ-RU.pdf).
 
-Each problem folder holds the statement, its figures, the scorer and the source it was migrated from.
+Each problem folder holds the statement in three languages, its figures and the source it was migrated from.

@@ -15,10 +15,9 @@
 - `train.csv`: Содержит обучающие данные в виде примеров текста с соответствующими метками (`ru`, `kaz`, `eng`).
 - `test.csv`: Содержит только примеры текста без меток. Ваша модель должна предсказать правильную метку для каждого тестового примера.
 
-Доступ к датасету можно получить по ссылкам:
+Доступ к датасету можно получить по ссылке:
 
-- [Обучающий датасет (Train)](https://drive.google.com/file/d/1XUD55k0pOmVhTXIGqTzqCdNUVowwsiZT/view?usp=sharing)
-- [Тестовый датасет (Test)](https://drive.google.com/file/d/1kQpO0guFWuVnuBjQB8vzQtS8T6IgzT2-/view?usp=sharing)
+- [Скачать who-speaks-what.zip](https://contest.faio.kz/problems/01a1c0a6-2f1e-70cd-a81c-925cb892e062/public/who-speaks-what.zip)
 
 ## Входные данные
 

@@ -30,4 +30,4 @@ Welcome to the FAIO 2025 Qualification round. Its six problems range from pen-an
 | E | [Can You Become an AI Yoga Instructor?](./e-ai-yoga-instructor/) | [English](./e-ai-yoga-instructor/en.md) · [Қазақша](./e-ai-yoga-instructor/kz.md) · [Русский](./e-ai-yoga-instructor/ru.md) |
 | F | [Simple Objects](./f-simple-objects/) | [English](./f-simple-objects/en.md) · [Қазақша](./f-simple-objects/kz.md) · [Русский](./f-simple-objects/ru.md) |
 
-Each problem folder holds the statement, its figures, the scorer and the source it was migrated from.
+Each problem folder holds the statement in three languages, its figures and the source it was migrated from.

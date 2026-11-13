@@ -15,7 +15,7 @@ You are given two CSV files:
 - `train.csv`: Contains training data in the form of text samples with their corresponding labels (`ru`, `kaz`, `eng`).
 - `test.csv`: Contains only text samples, without labels. Your model must predict the correct label for each test example.
 
-Both files are provided in `data.zip` (see the **Data** section below).
+Both files are provided in `who-speaks-what.zip` (see the **Data** section below).
 
 ## Input
 
@@ -67,8 +67,8 @@ id,label
 
 ## Data
 
-[Download data.zip (1.4 MB)](https://contest.faio.kz/problems/01a1c0a6-2f1e-70cd-a81c-925cb892e062/public/data.zip)
+[Download who-speaks-what.zip (1.4 MB)](https://contest.faio.kz/problems/01a1c0a6-2f1e-70cd-a81c-925cb892e062/public/who-speaks-what.zip)
 
 ```bash
-wget https://contest.faio.kz/problems/01a1c0a6-2f1e-70cd-a81c-925cb892e062/public/data.zip
+wget https://contest.faio.kz/problems/01a1c0a6-2f1e-70cd-a81c-925cb892e062/public/who-speaks-what.zip
 ```
