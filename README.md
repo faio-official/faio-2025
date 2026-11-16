@@ -1,11 +1,12 @@
 <!-- DOCTOC SKIP -->
 
-<h1 align="center">
+<div align="center">
   <a href="https://faio.kz">
-    <img height="120" src="./logo.png" alt="FAIO logo"/>
+    <img src="https://faio.kz/assets/img/logo-faio.png" alt="FAIO logo" width="100">
   </a>
-  <br/>FAIO 2025
-</h1>
+</div>
+
+<h1 align="center">FAIO 2025</h1>
 
 <p align="center">
   🎓 2nd edition — statements in three languages, figures and the original Kaggle and Yandex sources.
